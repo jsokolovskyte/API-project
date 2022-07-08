@@ -1,6 +1,6 @@
 body{
-    background: white;
-    background-repeat: repeat;
+    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/598a0a72246869.5be128d3f1b9f.jpg);
+    background-size: contain;
 }
 h1{
     color: black;
