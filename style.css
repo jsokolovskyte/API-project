@@ -27,8 +27,7 @@ h1{
     margin-right: auto;
     box-sizing: border-box;
     gap: 20px;
-    border: 2px solid black;
-    padding: 100px 50px 100px 50px;
+    padding: 10px 50px 80px 50px;
     justify-content: center;
 }
 .post-header h2{
@@ -39,7 +38,7 @@ h1{
     border: 2px solid black;
     width: 31%;
     padding: 20px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
     text-align: center;
     
 }
@@ -56,7 +55,7 @@ h1{
     color: black;
 }
 .post-author a:hover{
-    color:  rgb(239, 209, 15);
+    color:  rgb(0, 166, 255);
 }
 .post-content{
     font-size: 17px;
@@ -75,7 +74,7 @@ h1{
     color: black;
 }
 .see-more a:hover{
-    color:  rgb(239, 209, 15);
+    color:  rgb(0, 166, 255);
 }
 
 #posts-wrapper img{
@@ -95,9 +94,17 @@ h1{
     margin-right: auto;
     box-sizing: border-box;
     gap: 20px;
-    border: 2px solid black;
-    padding: 100px 50px 100px 50px;
+    padding: 10px 50px 80px 50px;
     justify-content: space-around
+}
+.album-item{
+    box-sizing: border-box;
+    border: 2px solid black;
+    width: 31%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    
 }
 .album-title{
     font-size: 24px;
@@ -107,7 +114,7 @@ h1{
     color: black;
 }
 .album-title a:hover{
-    color:  rgb(239, 209, 15);
+    color:  rgb(0, 166, 255);
 }
 #album-wrapper img{
 width: 300px;
@@ -119,7 +126,7 @@ width: 300px;
     color: black;
 }
 .album-author a:hover{
-    color: rgb(239, 209, 15);
+    color: rgb(0, 166, 255);
 }
 
 #user-wrapper{
@@ -130,8 +137,7 @@ width: 300px;
     margin-right: auto;
     box-sizing: border-box;
     gap: 20px;
-    border: 2px solid black;
-    padding: 100px 50px 100px 50px;
+    padding: 10px 50px 80px 50px;
     justify-content: center;
 }
 #user-wrapper h1{
@@ -143,7 +149,7 @@ width: 300px;
     border: 2px solid black;
     border-radius: 15px;
     width: 30%;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
     margin-left: auto;
     margin-right: auto;
 }
