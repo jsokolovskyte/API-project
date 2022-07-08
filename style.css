@@ -1,6 +1,6 @@
-body{
-    margin: 1px;    
-    background-color: rgb(239, 239, 226);
+body{    
+    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/6cee5b129331473.6169f3546f49c.png);
+    background-size: contain;
 }
 h1{
     color: black;
