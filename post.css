@@ -1,0 +1,43 @@
+body{
+    background-image: url(https://www.rismedia.com/wp-content/uploads/2019/05/social_media_post_936185802.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    color: black;
+    font-weight: 300;
+    margin: 30px;
+}
+#post-wrapper{
+    margin-left: auto;
+    margin-right: auto;
+}
+.post-item{
+    border: 2px solid black;
+    width: 70%;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+}
+.post-item p{
+    font-size: 20px;
+}
+
+.textWrap{
+    display: block;
+    width: 58%;
+    margin-top: 20px;
+}
+img{
+    width: 40%;
+    margin-right: 10px;
+}
+.textWrap a{
+    color: rgb(60, 136, 141);
+    font-size: 18px;
+}
+.textWrap a:hover{
+    color: rgb(146, 198, 202);
+}
