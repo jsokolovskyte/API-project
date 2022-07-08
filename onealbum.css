@@ -1,3 +1,7 @@
+body{
+    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/612ebd73857253.5c1ad1bd122fe.png);
+    background-size: contain;
+}
 h1{
     margin: 30px;
     font-weight: 300;
