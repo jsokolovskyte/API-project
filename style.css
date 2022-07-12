@@ -225,15 +225,34 @@ width: 300px;
 .user-name a:hover{
     color: blue;
 }
-.navbar-nav a{
+body{
+    margin: 0;
+}
+header{
+    background-color: white;
+    box-shadow: 2px 2px 2px grey;
+    padding: 10px;
+}
+nav ul{
+    display: flex;
+}
+nav li{
+    width: 7%;
+    list-style: none;
+}
+nav a{
+    text-decoration: none;
+    color: grey;
+    font-size: 19px;
+}
+nav a:hover{
     color: black;
 }
-.navbar-nav a:hover{
-    color: lightgrey;
+.active{
+    color: black;
 }
-.navbar-nav a{
-    color: rgb(95, 95, 95);
-}
-.navbar-nav a:hover{
-    color: lightgrey;
+form{
+    display: flex;
+    justify-content: end;
+    margin-top: -43px;
 }
