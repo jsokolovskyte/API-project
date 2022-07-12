@@ -54,12 +54,12 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 
             let hiddenData = true
             let commentDiv = document.createElement("div")
+            let commentValue = document.createElement("ul")
             commentButton.addEventListener("click", () => {
 
                 if(hiddenData){
-                    console.log("hi")
 
-                    let commentValue = document.createElement("ul")
+                    
                     let commentedBy = document.createElement("p")
                     commentValue.classList.add('comment-value')
                     commentedBy.classList.add('commented-by')
@@ -72,11 +72,11 @@ fetch('https://jsonplaceholder.typicode.com/posts')
                     commentDiv.style.display = "none"
                 }
                hiddenData = !hiddenData
-            })
-        }) 
+              })
+            }) 
+          })
+          postsWrapper.append(postItem);
+          postItem.append(img, postTitle, postAuthor, postBody, commentButton);
+        });
       })
-    postItem.append(img, postTitle, postAuthor, postBody, commentButton);
-    postsWrapper.append(postItem);
-    });
-  })
 })
