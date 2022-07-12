@@ -19,7 +19,7 @@ h1{
     border: 2px solid black;
     border-radius: 15px;
     width: 60%;
-    background-color: rgba(255, 255, 255, 0.81);
+    background-color: rgba(255, 255, 255, 0.8);
     margin-left: auto;
     margin-right: auto;
 }
@@ -95,12 +95,37 @@ p{
 .user-name a:hover{
     color: blue;
 }
-.navbar-nav a{
-    color: rgb(95, 95, 95);
-}
-.navbar-nav a:hover{
-    color: lightgrey;
-}
 .user-address{
     margin-bottom: 10px;
+}
+body{
+    margin: 0;
+}
+header{
+    background-color: white;
+    box-shadow: 2px 2px 2px grey;
+    padding: 10px;
+}
+nav ul{
+    display: flex;
+}
+nav li{
+    width: 7%;
+    list-style: none;
+}
+nav a{
+    text-decoration: none;
+    color: grey;
+    font-size: 19px;
+}
+nav a:hover{
+    color: black;
+}
+.active{
+    color: black;
+}
+form{
+    display: flex;
+    justify-content: end;
+    margin-top: -43px;
 }
