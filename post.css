@@ -41,3 +41,34 @@ img{
 .textWrap a:hover{
     color: rgb(146, 198, 202);
 }
+body{
+    margin: 0;
+}
+header{
+    background-color: white;
+    box-shadow: 2px 2px 2px grey;
+    padding: 10px;
+}
+nav ul{
+    display: flex;
+}
+nav li{
+    width: 7%;
+    list-style: none;
+}
+nav a{
+    text-decoration: none;
+    color: grey;
+    font-size: 19px;
+}
+nav a:hover{
+    color: black;
+}
+.active{
+    color: black;
+}
+form{
+    display: flex;
+    justify-content: end;
+    margin-top: -43px;
+}
