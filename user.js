@@ -1,12 +1,3 @@
-//   3. Sukurti naują puslapį user.html, kuriame bus atvaizduojama vartotojo informacija:
-//   3.1. Pilnas vardas.
-//   3.2. Vartotojo vardas / nick'as.
-//   3.3. El. paštas.
-//   3.4. Adresas, kuris turės gatvę, namo numerį, miestą, pašto kodą. Paspaudus ant adreso, pagal koordinates, turėtų atidaryti šios vietos Google Maps.
-//   3.5. Telefono numeris.
-//   3.6. Internetinio puslapio adresas.
-//   3.7. Įmonės, kurioje dirba, pavadinimas. 
-
 let userWrapper = document.querySelector('#user-wrapper')
 
 fetch('https://jsonplaceholder.typicode.com/users')
@@ -34,6 +25,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
         let userGeoAddress = [`${user.address.geo.lat} + ${user.address.geo.lng}`]
 
         let userAddress = document.createElement("div")
+        userAddress.classList.add("user-address")
         userAddress.innerHTML = `<strong>Adress:</strong> <a href = "https://maps.google.com/maps?q=${userGeoAddress}"> ${user.address.street}, ${user.address.suite}, ${user.address.city}, ${user.address.zipcode} </a>`
     
         let userPhone = document.createElement("p")
@@ -67,15 +59,16 @@ fetch('https://jsonplaceholder.typicode.com/users')
             posts.map(post => {
                 let hiddenData = true
                 let userDiv = document.createElement("div")
+                let userPost = document.createElement("p")
+                let readMore = document.createElement("span")
+
                 userPostButton.addEventListener("click", () =>{
 
                     if (user.id == post.userId && hiddenData){
 
-                        let userPost = document.createElement("p")
                         userPost.classList.add("user-post")
                         userPost.innerHTML = `<strong>${post.title}</strong>`
 
-                        let readMore = document.createElement("span")
                         readMore.classList.add("read-more")
                         readMore.innerHTML = `<a href="./post.html?post_id=${post.id}">Read More</a>`
     
@@ -95,11 +88,12 @@ fetch('https://jsonplaceholder.typicode.com/users')
                 albums.map(album => {
                     let hiddenData = true
                     let albumDiv = document.createElement("div")
+                    let userAlbum = document.createElement("ul")
+
 
                     userAlbumtButton.addEventListener("click", () =>{
                         if (user.id == album.userId && hiddenData){
 
-                            let userAlbum = document.createElement("ul")
                             userAlbum.classList.add("user-album")
                             userAlbum.innerHTML = `<li><a href="./onealbum.html?album_id=${album.id}&album_title=${album.title}&user_id=${album.userId}&user_name=${user.name}">${album.title}</a></li>`
                             albumDiv.append(userAlbum)
