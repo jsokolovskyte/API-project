@@ -21,7 +21,7 @@ h1{
     width: 48%;
     padding: 20px;
     font-weight: 300;
-    background-color: rgba(255, 255, 255, 0.81);
+    background-color: rgba(255, 255, 255, 0.8);
     
 }
 .post-title{
@@ -69,6 +69,7 @@ img{
     border: 1px solid black;
     text-align: left;
     padding: 10px;
+    margin-top: 20px;
     border-radius: 10px;
     background-color: rgba(239, 209, 15, 0.1);
 }
@@ -81,15 +82,34 @@ img{
 .comments-wrap a:hover{
     color: rgb(239, 209, 15);
 }
-.navbar-nav a{
+body{
+    margin: 0;
+}
+header{
+    background-color: white;
+    box-shadow: 2px 2px 2px grey;
+    padding: 10px;
+}
+nav ul{
+    display: flex;
+}
+nav li{
+    width: 7%;
+    list-style: none;
+}
+nav a{
+    text-decoration: none;
+    color: grey;
+    font-size: 19px;
+}
+nav a:hover{
     color: black;
 }
-.navbar-nav a:hover{
-    color: lightgrey;
+.active{
+    color: black;
 }
-.navbar-nav a{
-    color: rgb(95, 95, 95);
-}
-.navbar-nav a:hover{
-    color: lightgrey;
+form{
+    display: flex;
+    justify-content: end;
+    margin-top: -43px;
 }
