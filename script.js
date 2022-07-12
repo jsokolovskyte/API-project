@@ -1,10 +1,3 @@
-// API nuoroda: https://jsonplaceholder.typicode.com
-
-// 1. Sukurti puslapį, kuriame bus atvaizduojami įrašai (posts). Kiekvienas įrašas turi:
-//   1.1. Pavadinimą.
-//   1.2. Pastraipą su įrašo (post) turiniu.
-//   1.3. Autorių. Tai turi būti nuoroda. Kol kas ji gali niekur nevesti.
-
 let postsWrapper = document.querySelector('#posts-wrapper');
 let albumWrapper = document.querySelector('#album-wrapper')
 
@@ -49,10 +42,6 @@ fetch('https://jsonplaceholder.typicode.com/posts?_limit=3')
       let postHeader = document.createElement("h1")
       postHeader.innerHTML = "Available posts:<br>"
 
-//   2. Po kiekvienu įrašu (post) gali būti komentarų (sukurti variantus įrašui, kuris neturi komentarų, kuris turi vieną komentarą ir kuris turi daugiau nei vieną komentarą). Kiekvienas komentaras turi:
-//   2.1. Komentaro pavadinimą.
-//   2.2. Komentaro turinį - pastraipą.
-//   2.3. Komentarą parašiusio asmens el. pašto adresą.
         
               postItem.append(img, postTitle, postAuthor, postBody);
               postsWrapper.append(postItem);
@@ -60,12 +49,6 @@ fetch('https://jsonplaceholder.typicode.com/posts?_limit=3')
     });
   })
 })
-
-
-
-
-
-
 
 let userWrapper = document.querySelector('#user-wrapper')
 
@@ -121,15 +104,16 @@ fetch('https://jsonplaceholder.typicode.com/users?_limit=3')
             posts.map(post => {
                 let hiddenData = true
                 let userDiv = document.createElement("div")
+                let userPost = document.createElement("p")
+                let readMore = document.createElement("span")
+
                 userPostButton.addEventListener("click", () =>{
 
                     if (user.id == post.userId && hiddenData){
 
-                        let userPost = document.createElement("p")
                         userPost.classList.add("user-post")
                         userPost.innerHTML = `<strong>${post.title}</strong>`
 
-                        let readMore = document.createElement("span")
                         readMore.classList.add("read-more")
                         readMore.innerHTML = `<a href="./post.html?post_id=${post.id}">Read More</a>`
     
@@ -149,11 +133,11 @@ fetch('https://jsonplaceholder.typicode.com/users?_limit=3')
                 albums.map(album => {
                     let hiddenData = true
                     let albumDiv = document.createElement("div")
+                    let userAlbum = document.createElement("ul")
 
                     userAlbumtButton.addEventListener("click", () =>{
                         if (user.id == album.userId && hiddenData){
 
-                            let userAlbum = document.createElement("ul")
                             userAlbum.classList.add("user-album")
                             userAlbum.innerHTML = `<li><a href="./onealbum.html?album_id=${album.id}&album_title=${album.title}&user_id=${album.userId}&user_name=${user.name}">${album.title}</a></li>`
                             albumDiv.append(userAlbum)
@@ -170,9 +154,6 @@ fetch('https://jsonplaceholder.typicode.com/users?_limit=3')
         })
     })
 })
-
-
-
 
 let queryParams = document.location.search;
 let urlParams = new URLSearchParams(queryParams);
