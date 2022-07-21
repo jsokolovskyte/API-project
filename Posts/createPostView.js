@@ -1,4 +1,4 @@
-import { getUserById } from "../createPostController.js";
+import { getUserById } from "./createPostController.js";
 
 export default async function createPost(createdPost, formElement) {
   let { body, title, id, userId } = createdPost;
