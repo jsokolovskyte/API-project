@@ -3,6 +3,9 @@ import { getUserById } from "./createPostController.js";
 export default async function createPost(createdPost, formElement) {
   let { body, title, id, userId } = createdPost;
 
+  let MainWrap = document.createElement("div")
+  MainWrap.classList.add("main-wrap")
+
   let createdPostWrapper = document.createElement('div');
   createdPostWrapper.classList.add('post-wrapper');
 
@@ -20,7 +23,8 @@ export default async function createPost(createdPost, formElement) {
   postContentElement.classList.add("created-post-body")
   postContentElement.textContent = body;
 
+  MainWrap.append(createdPostWrapper)
   createdPostWrapper.append(postTitleElement, postAuthorElement, postContentElement);
 
-  formElement.after(createdPostWrapper);
+  formElement.after(MainWrap);
 }

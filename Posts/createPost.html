@@ -10,28 +10,132 @@
 </head>
 <body>
     <h1>Create new Post</h1>
-    <div class="form-wrapper">
   <form id="create-post-form">
+
+    <div class="one-input">
+
     <div class="form-control">
       <label for="post-title">Post title</label><br>
       <input type="text" name="title" id="post-title" placeholder="">
     </div>
+
+  </div>
+
+  <div class="one-input">
 
     <div class="form-control">
       <label for="post-content">Post content</label><br>
       <textarea name="content" id="post-content" cols="40" rows="7" placeholder="Content of your post...."></textarea>
     </div>
 
+  </div>
+
+  <div class="one-input">
+
     <div class="form-control">
       <label for="post-author">Post author</label><br>
       <select name="author" id="post-author">
       </select>
     </div>
+  </div>
+
+  <div class="button-center">
 
     <input type="submit" id="post-button" value="Create post">
+
+  </div>
   </form>
+
+  <h1 class="new-user-heading"> Create new user</h1>
+  <form id="create-user-form">
+    <div class="two-inputs">
+
+    <div class="form-control">
+      <label for="user-name">Name:</label><br>
+      <input type="text" name="name" id="user-name" class="user-input">
+    </div>
+
+    <div class="form-control">
+      <label for="user-username">Username:</label><br>
+      <input type="text" name="username" id="user-username" class="user-input">
+    </div>
+
+    </div>
+
+    <div class="two-inputs">
+
+    <div class="form-control">
+      <label for="user-email">Email:</label><br>
+      <input type="email" name="email" id="user-email" class="user-input">
+    </div>
+
+    <div class="form-control">
+      <label for="user-street">Street:</label><br>
+      <input type="text" name="street" id="user-street" class="user-input">
+    </div>
+
 </div>
+
+<div class="two-inputs">
+
+    <div class="form-control">
+      <label for="user-suite">Suite:</label><br>
+      <input type="text" name="suite" id="user-suite" class="user-input">
+    </div>
+
+    <div class="form-control">
+      <label for="user-city">City:</label><br>
+      <input type="text" name="city" id="user-city" class="user-input">
+    </div>
+</div>
+
+    <div class="two-inputs">
+
+    <div class="form-control">
+      <label for="user-zip">Zip:</label><br>
+      <input type="text" name="zip" id="user-zip" class="user-input">
+    </div>
+
+    <div class="form-control">
+      <label for="user-phone">Phone:</label><br>
+      <input type="text" name="phone" id="user-phone" class="user-input">
+    </div>
+</div>
+
+<div class="two-inputs">
+
+    <div class="form-control">
+      <label for="user-website">Website:</label><br>
+      <input type="text" name="website" id="user-website" class="user-input">
+    </div>
+
+    <div class="form-control">
+      <label for="user-company-name">Company name:</label><br>
+      <input type="text" name="company-name" id="user-company-name" class="user-input">
+    </div>
+</div>
+
+    <div class="two-inputs">
+
+    <div class="form-control">
+      <label for="user-company-catchphrase">Company catchphrase:</label><br>
+      <input type="text" name="company-catchphrase" id="user-company-catchphrase" class="user-input">
+    </div>
+
+    <div class="form-control">
+      <label for="user-company-bs">Company bs:</label><br>
+      <input type="text" name="company-bs" id="user-company-bs" class="user-input">
+    </div>
+
+</div>
+<div class="button-center">
+
+<input type="submit" value="Create user" class="post-button">
+
+</div>
+  </form>
   
   <script type="module" src="../Posts/createPost.js"></script>
+  <script type="module" src="../Users/createUser.js"></script>
 </body>
 </html>
