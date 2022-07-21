@@ -38,7 +38,7 @@ function headerView(){
         let navItemElement = document.createElement('li');
         let navItemLink = document.createElement('a');
         navItemLink.textContent = navItem.title;
-        navItemLink.setAttribute('href', `/${navItem.path}`);
+        navItemLink.setAttribute('href', `../${navItem.path}`);
       
         if (pathname.includes(navItem.path)) {
           navItemLink.classList.add('active');

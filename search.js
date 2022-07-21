@@ -1,5 +1,5 @@
-import { renderListElement } from '../function.js';
-import headerView from '../header.js';
+import { renderListElement } from './function.js';
+import headerView from './header.js';
 
 headerView();
 
@@ -68,7 +68,7 @@ function renderAllUsersInSearch(searchText) {
         users.map(user => {
           renderListElement({
             content: user.name,
-            href: `../Users/oneuser.html?user_id=${user.id}`,
+            href: `./oneuser.html?user_id=${user.id}`,
             parentElement: usersList,
             class: 'search-item',
           })
@@ -82,7 +82,7 @@ function renderAllUsersInSearch(searchText) {
               usersByName.map(user => {
                 renderListElement({
                   content: user.name,
-                  href: `../Users/oneuser.html?user_id=${user.id}`,
+                  href: `./oneuser.html?user_id=${user.id}`,
                   parentElement: usersList,
                   class: 'search-item',
                 })
@@ -96,7 +96,7 @@ function renderAllUsersInSearch(searchText) {
                     usersByEmail.map(user => {
                       renderListElement({
                         content: user.name,
-                        href: `../Users/oneuser.html?user_id=${user.id}`,
+                        href: `./oneuser.html?user_id=${user.id}`,
                         parentElement: usersList,
                         class: 'search-item',
                       })
@@ -122,7 +122,7 @@ function renderAllPosts(searchText) {
         posts.map(post => {
           let postData = {
             content: post.title,
-            href: `../Posts/post.html?post_id=${post.id}`,
+            href: `./post.html?post_id=${post.id}`,
             parentElement: postsList,
             class: 'search-item',
           }
@@ -146,7 +146,7 @@ function renderAllAlbums(searchText) {
         albums.map(album => {
           let albumData = {
             content: album.title,
-            href: `../Albums/album.html?album_id=${album.id}`,
+            href: `./album.html?album_id=${album.id}`,
             parentElement: albumsList,
             class: 'search-item',
           };

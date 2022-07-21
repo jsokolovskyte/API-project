@@ -67,7 +67,7 @@ async function init() {
         createdPostWrapper.classList.add('post-wrapper');
 
         let Username = document.createElement('h2');
-        Username.innerHTML = `<a href="/Users/oneuser.html">${name} <span>(${username})(${id})</span></a>`;
+        Username.innerHTML = `<a href="../Users/oneuser.html">${name} <span>(${username})(${id})</span></a>`;
 
         let userEmail = document.createElement('span');
         userEmail.innerHTML = `<strong>Email:</strong> <a href="mailto:">${email}</a>`

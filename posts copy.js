@@ -1,5 +1,5 @@
-import {firstLetterUpperCase} from '../function.js';
-import headerView from '../header.js';
+import {firstLetterUpperCase} from './function.js';
+import headerView from './header.js';
 
 headerView()
 
@@ -19,7 +19,7 @@ fetch('https://jsonplaceholder.typicode.com/posts?_limit=50')
 
         let postAuthor = document.createElement('span'); //cia turi buti a
         postAuthor.classList.add('post-author');
-        postAuthor.innerHTML = `<strong>Author:</strong> <a href="../Users/oneuser.html?user_id=${user.id}">${user.name}</a><br>`
+        postAuthor.innerHTML = `<strong>Author:</strong> <a href="./oneuser.html?user_id=${user.id}">${user.name}</a><br>`
         // postAuthor.textContent = `Author: ${user.name}`
         // postAuthor.href = ''
         // postItem.append(postAuthor)

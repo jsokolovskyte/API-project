@@ -34,14 +34,14 @@ fetch("https://jsonplaceholder.typicode.com/albums?")
                                                 
                                 let albumAuthor = document.createElement("span")
                                 albumAuthor.classList.add("album-author")
-                                albumAuthor.innerHTML = `<br><a href="/Users/oneuser.html?user_id=${user.id}">Album was created by ${user.name}</a>`
+                                albumAuthor.innerHTML = `<br><a href="./oneuser.html?user_id=${user.id}">Album was created by ${user.name}</a>`
             
                                 let albumTitle = document.createElement("h2")
 
                                 let updatedTitle = firstLetterUpperCase(album.title)
 
                                 albumTitle.classList.add("album-title")
-                                albumTitle.innerHTML = `<a href="/Albums/onealbum.html?album_id=${album.id}&album_title=${album.title}&user_id=${album.userId}&user_name=${user.name}">${updatedTitle}</a>`
+                                albumTitle.innerHTML = `<a href="./onealbum.html?album_id=${album.id}&album_title=${album.title}&user_id=${album.userId}&user_name=${user.name}">${updatedTitle}</a>`
         
                                 albumWrapper.append(albumItem)
                                 albumItem.append(albumTitle,albumImage, albumAuthor)

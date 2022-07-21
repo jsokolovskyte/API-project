@@ -1,4 +1,4 @@
-import { getUserById } from "../createPostController.js";
+import { getUserById } from "./createPostController.js";
 
 export default async function createPost(createdPost, formElement) {
   let { body, title, id, userId } = createdPost;
@@ -14,7 +14,7 @@ export default async function createPost(createdPost, formElement) {
 
   let postAuthorElement = document.createElement('span');
   postAuthorElement.classList.add("created-post-author")
-  postAuthorElement.innerHTML = `<strong>Post author:</strong> <a href="../Users/oneuser.html?user_id=${userId}">${postAuthor.name}</a>`
+  postAuthorElement.innerHTML = `<strong>Post author:</strong> <a href="./oneuser.html?user_id=${userId}">${postAuthor.name}</a>`
 
   let postContentElement = document.createElement('p');
   postContentElement.classList.add("created-post-body")

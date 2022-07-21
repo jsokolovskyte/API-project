@@ -24,7 +24,7 @@ fetch(`https://jsonplaceholder.typicode.com/albums/${albumId}/photos`)
 
       let albumAuthorElement = document.createElement('span');
       albumAuthorElement.classList.add('album-author');
-      albumAuthorElement.innerHTML = `<strong>Album author:</strong> <a href="/Users/oneuser.html?user_id=${userId}">${userName}</a>`;
+      albumAuthorElement.innerHTML = `<strong>Album author:</strong> <a href="../Users/oneuser.html?user_id=${userId}">${userName}</a>`;
 
       let albumPhotos = document.createElement('div');
       albumPhotos.classList.add('album-photos');

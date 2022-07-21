@@ -25,7 +25,7 @@ export function renderAllUsers(user, userWrapper){
         userItem.classList.add("user-item")
         let userName = document.createElement("p")
         userName.classList.add("user-name")
-        userName.innerHTML = `<a href="/Users/oneuser.html?user_id=${user.id}"><h2> ${user.name} - ${user.username}<h2></a>`
+        userName.innerHTML = `<a href="../Users/oneuser.html?user_id=${user.id}"><h2> ${user.name} - ${user.username}<h2></a>`
 
         let userEmail = document.createElement("p")
         userEmail.innerHTML = `<strong>Email</strong>: <a href="mailto:${user.email}">${user.email}</a>`
@@ -72,7 +72,7 @@ export function renderAllUsers(user, userWrapper){
                         userPost.innerHTML = `<strong>${post.title}</strong>`
 
                         readMore.classList.add("read-more")
-                        readMore.innerHTML = `<a href="/Posts/post.html?post_id=${post.id}">Read More</a>`
+                        readMore.innerHTML = `<a href="../Posts/post.html?post_id=${post.id}">Read More</a>`
     
                         userDiv.append(userPost, readMore)
                         userItem.append(userDiv)
@@ -97,7 +97,7 @@ export function renderAllUsers(user, userWrapper){
                         if (user.id == album.userId && hiddenData){
 
                             userAlbum.classList.add("user-album")
-                            userAlbum.innerHTML = `<li><a href="/Albums/onealbum.html?album_id=${album.id}&album_title=${album.title}&user_id=${album.userId}&user_name=${user.name}">${album.title}</a></li>`
+                            userAlbum.innerHTML = `<li><a href="../Albums/onealbum.html?album_id=${album.id}&album_title=${album.title}&user_id=${album.userId}&user_name=${user.name}">${album.title}</a></li>`
                             albumDiv.append(userAlbum)
                             userItem.append(albumDiv)
                             albumDiv.style.display = "block"
