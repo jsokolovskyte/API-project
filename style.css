@@ -1,0 +1,230 @@
+header{
+    margin-top: -20px !important;
+}
+body{    
+background-color: azure;
+}
+h1{
+    color: black;
+    font-size: 50px;
+    font-weight: 300;
+    margin-top: 90px;
+}
+.welcome-wrapper{
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.welcome-wrapper img{
+    width: 150px;
+    margin-right: 20px;
+}
+
+#posts-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    gap: 20px;
+    padding: 10px 50px 80px 50px;
+    justify-content: center;
+}
+.post-header h2{
+    text-align: center;
+}
+.post-item{
+    box-sizing: border-box;
+    width: 31%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    
+}
+.post-title{
+    padding: 10px;
+    margin-bottom: 20px;
+    height: 110px;
+}
+.post-author a{
+    text-decoration: underline;
+    color: black;
+}
+.post-author a:hover{
+    color:  rgb(0, 166, 255);
+}
+.post-content{
+    font-size: 17px;
+    border: 0px solid;
+    padding: 2px;
+    margin-top: 10px;
+    box-shadow: 1px 1px 1px black;
+}
+.see-more{
+    text-align: center;
+    font-size: 20px;
+    margin-top: -65px;
+    margin-bottom: 70px;
+}
+.see-more button{
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(57, 200, 200);
+    padding: 6px;
+}
+.see-more a{
+    color: white;
+    text-decoration: none;
+}
+.see-more button:hover{
+    background-color:  rgb(0, 166, 255); 
+}
+
+#posts-wrapper img{
+    width: 300px;
+    height: 250px;
+}
+#album-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    gap: 20px;
+    padding: 10px 50px 80px 50px;
+    justify-content: space-around
+}
+.album-item{
+    box-sizing: border-box;
+    width: 31%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    
+}
+.album-title{
+    font-size: 24px;
+    color: black;
+}
+.album-title a{
+    color: black;
+}
+.album-title a:hover{
+    color:   rgb(57, 200, 200);
+}
+#album-wrapper img{
+object-fit: contain;
+margin-top: -50px;
+}
+.album-author{
+    font-size: 16px;
+}
+.album-author a{
+    color: black;
+}
+.album-author a:hover{
+    color:  rgb(57, 200, 200);
+}
+
+#user-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    gap: 20px;
+    padding: 10px 50px 80px 50px;
+    justify-content: center;
+}
+#user-wrapper h1{
+    font-size: 25px;
+}
+
+.user-item{
+    box-sizing: border-box;
+    width: 32%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 13px;
+    margin-bottom: 10px;
+
+}
+#user-wrapper img{
+    width: 52%;
+    float: left;
+    margin-right: 17px;
+    margin-bottom: 15px;
+}
+h2{
+    color: black;
+    font-size: 30px;
+    font-weight: 300;
+    margin: 35px 0px 65px 0px;
+}
+.user-post-button{
+    background-color: rgb(10, 186, 181);
+    color: black;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+.user-album-button{
+    background-color: rgb(10, 186, 181);
+    color: black;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: 400;
+}
+.user-post-button:hover{
+    background-color: rgb(0, 166, 255);
+}
+.user-album-button:hover{
+    background-color: rgb(0, 166, 255);
+}
+#user-wrapper .user-post{
+    list-style-type: none;
+    font-size: 18px;
+    margin-top: 10px;
+}
+#user-wrapper .read-more a{
+    color:  rgb(104, 104, 255);
+}
+#user-wrapper .read-more a:hover{
+    color:  rgb(57, 200, 200);
+}
+#user-wrapper .user-album a{
+    color: rgb(104, 104, 255);
+    text-decoration: none;
+    font-size: 18px;
+}
+.user-album a:hover{
+    color: rgb(0, 166, 255);
+}
+#user-wrapper a{
+    color: rgb(0, 166, 255);
+}
+#user-wrapper strong{
+    color: black;
+    font-size: larger;
+    font-weight: 400;
+}
+#user-wrapper p{
+    color:  rgb(57, 200, 200);
+    font-size: 17px;
+}
+body{
+    margin: 0;
+}
