@@ -1,0 +1,90 @@
+body{
+    margin: 0;
+    background-color: azure;
+    text-align: center;
+}
+
+.active{
+    color: black;
+}
+form{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+form :last-child{
+    background-color: rgb(57, 200, 200);
+    border: none;
+    margin-left: 5px;
+    border-radius: 5px;
+    color: white;
+    width: 100px;
+    height: 30px;
+}
+form :last-child:hover{
+    background-color:  rgb(33, 127, 127);
+}
+form :first-child{
+    border: 1px solid rgb(57, 200, 200);
+    border-radius: 5px;
+    color: rgb(113, 113, 113);
+    width: 200px;
+    height: 25px;
+}
+
+.search-item {
+    list-style: none;
+    font-size: 18px;
+    font-weight: 600;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+a{
+color: rgb(57, 200, 200);
+}
+a:hover{
+    color:rgb(33, 127, 127);
+}
+h3{
+    color: rgb(35, 178, 178);
+    font-size: 23px;
+    background-color: rgba(240, 248, 255, 0.7);
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgb(57, 200, 200);
+    border-radius: 10px;
+}
+header{
+    background-color: white;
+    box-shadow: 2px 2px 2px grey;
+    padding: 10px;
+    position: absolute;
+    position: fixed;
+    width: 100%;
+    margin-top: -21px;
+}
+nav ul{
+    display: flex;
+}
+nav li{
+    width: 7%;
+    list-style: none;
+}
+nav a{
+    text-decoration: none;
+    color: grey;
+    font-size: 19px;
+}
+nav a:hover{
+    color: black;
+}
+nav p{
+    margin: -2px 250px 0px 25px;
+    font-size: 23px;
+    color:rgb(57, 200, 200);
+}
