@@ -9,9 +9,19 @@ let albumId = urlParams.get('album_id');
 
 let albumWrapper = document.querySelector("#album-wrapper")
 
-fetch("https://jsonplaceholder.typicode.com/albums?")
+function init(){
+
+let urlParams = document.location.search;
+let searchParams = new URLSearchParams(urlParams);
+let limit = searchParams.get('limit') ? searchParams.get('limit') : 12;
+let page = searchParams.get('page') ? searchParams.get('page') : 1;
+
+fetch(`https://jsonplaceholder.typicode.com/albums?_page=${page}&_limit=${limit}`)
 .then(res => res.json())
 .then(albums =>{
+    renderPaginationLinks({limit, page});
+
+
     albums.map(album => {
         let albumItem = document.createElement("div")
         albumItem.classList.add("album-item")
@@ -22,7 +32,7 @@ fetch("https://jsonplaceholder.typicode.com/albums?")
             users.map(user =>{
 
                 if (album.userId == user.id){
-                    fetch("https://jsonplaceholder.typicode.com/photos?_limit=48&_start=9")
+                    fetch("https://jsonplaceholder.typicode.com/photos")
                     .then(res => res.json())
                     .then(photos => {
                         photos.map(photo => {
@@ -54,3 +64,52 @@ fetch("https://jsonplaceholder.typicode.com/albums?")
         })
     })
 })
+}
+function renderPaginationLinks(data) {
+    let total = 100;
+    let limit = data.limit;
+    let pages = Math.ceil(total / limit);
+    let currentPage = Number(data.page);
+  
+    let paginationWrapper = document.createElement('div');
+    paginationWrapper.classList.add('pagination-wrapper');
+
+    if (currentPage !== 1) {
+        let firstPaginationPageItem = document.createElement('a');
+        firstPaginationPageItem.classList.add("text-pagination")
+        firstPaginationPageItem.href = `./album.html?page=1&limit=${limit}`;
+        firstPaginationPageItem.textContent = 'First';
+
+        let previousPaginationPageItem = document.createElement('a');
+        previousPaginationPageItem.classList.add("text-pagination")
+        previousPaginationPageItem.href = `./album.html?page=${currentPage - 1}&limit=${limit}`;
+        previousPaginationPageItem.textContent = 'Prev';
+        
+        paginationWrapper.append(firstPaginationPageItem, previousPaginationPageItem);
+      }
+  
+    for (let i = 1; i <= pages; i++) {
+      let paginationLink = document.createElement('a');
+      paginationLink.classList.add("pagination-link")
+      paginationLink.href = `./album.html?page=${i}&limit=${limit}`;
+      paginationLink.textContent = i;
+      paginationWrapper.append(paginationLink);
+    }
+
+    if (currentPage !== pages) {
+        let lastPaginationPageItem = document.createElement('a');
+        lastPaginationPageItem.classList.add("text-pagination")
+        lastPaginationPageItem.href = `./album.html?page=${pages}&limit=${limit}`;
+        lastPaginationPageItem.textContent = 'Last';
+
+        let nextPaginationPageItem = document.createElement('a');
+        nextPaginationPageItem.classList.add("text-pagination")
+        nextPaginationPageItem.href = `./album.html?page=${currentPage + 1}&limit=${limit}`;
+        nextPaginationPageItem.textContent = 'Next';
+        
+        paginationWrapper.append(nextPaginationPageItem, lastPaginationPageItem);
+      }
+  
+    albumWrapper.after(paginationWrapper);
+  }
+init()
